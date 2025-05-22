@@ -4,7 +4,7 @@ Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffus
 
 ## :fire: News
 
-- [2025/05/22] Our paper has been released.  
+- [2025/05/22] The code of our paper has been released. 
 
 
 
