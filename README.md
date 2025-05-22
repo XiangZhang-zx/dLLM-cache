@@ -18,7 +18,7 @@ Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffus
 
 
 - **Speedup**: Up to **9.1x faster** inference compared to standard dLLM pipelines.
-- **Performance**: Validated on **LLaDA 8B** and **Dream 7B**.
+- **Performance**: Validated on **[LLaDA 8B](https://arxiv.org/abs/2502.09992)** and **[Dream 7B](https://hkunlp.github.io/blog/2025/dream/)**.
 - **Latency**: Approaches ARM-level inference speeds in many scenarios.
 
 
@@ -40,7 +40,7 @@ If you find dLLM-Cache useful for your research and applications, please cite us
 ```bibtex
 @misc{liu2025dllm,
       title={dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching}, 
-      author={Zhiyuan Liu and Yicun Yang and Yaojie Zhang and Junjie Chen and Chang Zou and Qingyan Wei and Shaobo Wang and Linfeng Zhang },
+      author={Zhiyuan Liu and Yicun Yang and Yaojie Zhang and Junjie Chen and Chang Zou and Qingyan Wei and Shaobo Wang and Linfeng Zhang},
       year={2025},
       url={https://github.com/maomaocun/dLLM-cache},
 }
