@@ -4,7 +4,7 @@ Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffus
 
 ## :fire: News
 
-- [2025/05/22] The code of our paper has been released. 
+- [2025/05/22] Our paper has been released.
 
 
 
@@ -42,6 +42,6 @@ If you find dLLM-Cache useful for your research and applications, please cite us
       title={dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching}, 
       author={Zhiyuan Liu and Yicun Yang and Yaojie Zhang and Junjie Chen and Chang Zou and Qingyan Wei and Shaobo Wang and Linfeng Zhang },
       year={2025},
-      url={https://github.com/maomaocun/dLLM-Cache},
+      url={https://github.com/maomaocun/dLLM-cache},
 }
 ```
