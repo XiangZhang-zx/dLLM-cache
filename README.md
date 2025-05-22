@@ -1,6 +1,6 @@
 # dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching
 
-Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching"](./asset/dLLM-Cache_paper.pdf)** (dLLM-Cache).
+Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching"](./asset/paper.pdf)** (dLLM-Cache).
 
 ## :fire: News
 
