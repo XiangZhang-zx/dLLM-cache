@@ -4,6 +4,7 @@ Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffus
 
 ## :fire: News
 
+- [2025/05/23] The code of our paper has been released.
 - [2025/05/22] Our paper has been released.
 
 
@@ -17,8 +18,8 @@ Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffus
 **dLLM-Cache** is a **training-free adaptive caching framework** designed for dLLMs. It leverages token stability across denoising steps, combining **long-interval prompt caching** with **partial response updates** guided by feature similarity. This enables efficient reuse of computations, significantly reducing latency without sacrificing output quality. -->
 
 
-- **Speedup**: Up to **9.1x faster** inference compared to standard dLLM pipelines.
-- **Performance**: Validated on **[LLaDA 8B](https://arxiv.org/abs/2502.09992)** and **[Dream 7B](https://hkunlp.github.io/blog/2025/dream/)**.
+- **Speedup**: Achieves up to **9.1x** speedup over standard dLLM pipelines, with **no performance loss** on most tasks.
+- **Evaluation**: Evaluated on **[LLaDA 8B](https://arxiv.org/abs/2502.09992)** and **[Dream 7B](https://hkunlp.github.io/blog/2025/dream/)**.
 - **Latency**: Approaches ARM-level inference speeds in many scenarios.
 
 
