@@ -69,6 +69,8 @@ bash scripts/run_Dream_bbh_base.sh
 If you have any questions, please email [yangyicun187@gmail.com](mailto:yangyicun187@gmail.com).
 
 
+### 🎉 Acknowledgements
+This repository was built off of [LLaDA](https://github.com/ML-GSAI/LLaDA),[Dream](https://github.com/HKUNLP/Dream) and [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
 
 ## :pushpin: Citation
 If you find dLLM-Cache useful for your research and applications, please cite using this BibTeX:
