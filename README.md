@@ -29,6 +29,41 @@ Here's an overview of the process behind our **dLLM-Cache** method:
 
 
 
+## 🛠️ Installation
+
+To get started with dLLM-Cache, follow the installation instructions below.
+
+1. Clone the Repository:
+```sh
+git clone https://github.com/maomaocun/dLLM-Cache.git
+cd dLLM-Cache
+```
+
+2. Set Up the Environment:
+Create a Python environment with `conda` or `virtualenv` and install dependencies:
+```bash
+bash install.sh
+```
+
+
+3. Running Experiments:
+Run experiments using the provided scripts:
+
+```bash
+bash scripts/run_{model_name}_{task_name}_base.sh
+```
+### :blue_book: Example Usage
+1. gsm8k with LLaDA
+```bash
+bash scripts/run_LLaDA_gsm8k_base.sh
+```
+
+2. BBH with Dream
+```bash
+bash scripts/run_Dream_bbh_base.sh
+```
+
+
 ## :postbox: Contact
 If you have any questions, please email [yangyicun187@gmail.com](mailto:yangyicun187@gmail.com).
 
