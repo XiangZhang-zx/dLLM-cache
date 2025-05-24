@@ -54,7 +54,7 @@ Run experiments using the provided scripts:
 bash scripts/run_{model_name}_{task_name}_base.sh
 ```
 ### :blue_book: Example Usage
-1. gsm8k with LLaDA
+1. GSM8K with LLaDA
 ```bash
 bash scripts/run_LLaDA_gsm8k_base.sh
 ```
