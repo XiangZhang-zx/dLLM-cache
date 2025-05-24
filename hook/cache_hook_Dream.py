@@ -7,17 +7,21 @@ import types
 
 
 def logout_cache_Dream(model: nn.Module, tf_block_module_key_name: str) -> None:
-
+    """Restore original functions for transformer blocks and attention modules."""
     target_module: Optional[nn.ModuleList] = None
     for name, module in model.named_modules():
         if name == tf_block_module_key_name:
             target_module = module
+            break
     if target_module is None:
         return
     for tf_block in target_module:
-        forward_fn = getattr(tf_block, "_old_forward", tf_block.forward)
-        tf_block.forward = forward_fn
-
+        if hasattr(tf_block, "_old_forward"):
+            tf_block.forward = tf_block._old_forward
+            delattr(tf_block, "_old_forward")
+        if hasattr(tf_block.self_attn, "_old_forward"):
+            tf_block.self_attn.forward = tf_block.self_attn._old_forward
+            delattr(tf_block.self_attn, "_old_forward")
 
 def register_cache_Dream(model: nn.Module, tf_block_module_key_name: str) -> None:
     target_module: Optional[nn.ModuleList] = None

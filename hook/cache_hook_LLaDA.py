@@ -5,18 +5,27 @@ import types
 from cache import dLLMCache
 
 
-def logout_cache_LLaDA(model: nn.Module, tf_block_module_key_name: str) -> None:
 
+def logout_cache_LLaDA(model: nn.Module, tf_block_module_key_name: str) -> None:
+    """Restore original functions for transformer blocks, attention, and rotary embeddings."""
     target_module: Optional[nn.ModuleList] = None
     for name, module in model.named_modules():
         if name == tf_block_module_key_name:
             target_module = module
+            break
     if target_module is None:
         return
     for tf_block in target_module:
-        forward_fn = getattr(tf_block, "_old_forward", tf_block.forward)
-        tf_block.forward = forward_fn
-
+        if hasattr(tf_block, "_old_forward"):
+            tf_block.forward = tf_block._old_forward
+            delattr(tf_block, "_old_forward")
+        if hasattr(tf_block, "_old_attention"):
+            tf_block.attention = tf_block._old_attention
+            delattr(tf_block, "_old_attention")
+        if hasattr(tf_block.rotary_emb, "_old_forward"):
+            tf_block.rotary_emb.forward = tf_block.rotary_emb._old_forward
+            delattr(tf_block.rotary_emb, "_old_forward")
+            
 
 def register_cache_LLaDA(model: nn.Module, tf_block_module_key_name: str) -> None:
 
@@ -32,7 +41,7 @@ def register_cache_LLaDA(model: nn.Module, tf_block_module_key_name: str) -> Non
         setattr(tf_block.rotary_emb, "_old_forward", tf_block.rotary_emb.forward)
         tf_block.rotary_emb.forward = types.MethodType(
             RoPe_forward, tf_block.rotary_emb
-        )
+)
 
 
 def _attention(
