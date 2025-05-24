@@ -579,9 +579,9 @@ class LLaDA(TemplateLM):
         please consider subclassing HFLM and overriding this and other methods as needed.
         """
         if autogptq or gptqmodel:
-            raise ValueError("'autogptq' 和 'gptqmodel' 暂时不受到支持")
+            raise ValueError("'autogptq' and 'gptqmodel' are not supported yet")
         if peft or delta:
-            raise ValueError("'peft' 和 'delta' 暂时不受到支持")
+            raise ValueError("'peft' and 'delta' are not supported yet")
         model_kwargs = kwargs if kwargs else {}
 
         model_kwargs.update(
