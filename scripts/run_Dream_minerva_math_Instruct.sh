@@ -22,7 +22,7 @@ ADD_BOS_TOKEN="true" # Constant in the original loop's model_args
 OUTPUT_PATH="./${TASK}_log"
 
 accelerate launch --config_file ${ACCEL_CONFIG} --main_process_port ${MAIN_PORT} evaluation_script.py --model dream \
-    --model_args pretrained=${model},max_new_tokens=${MAX_NEW_TOKENS},diffusion_steps=${DIFFUSION_STEPS},temperature=${TEMPERATURE},top_p=${TOP_P},add_bos_token=${ADD_BOS_TOKEN},prompt_interval_steps=-1,gen_interval_steps=-1,cfg_interval_steps=-1,transfer_ratio=0.25,is_feature_cache=False,is_cfg_cache=False \
+    --model_args pretrained=${model},max_new_tokens=${MAX_NEW_TOKENS},diffusion_steps=${DIFFUSION_STEPS},temperature=${TEMPERATURE},top_p=${TOP_P},add_bos_token=${ADD_BOS_TOKEN},prompt_interval_steps=-1,gen_interval_steps=-1,cfg_interval_steps=-1,transfer_ratio=0.0,is_feature_cache=False,is_cfg_cache=False \
     --tasks ${TASK} \
     --num_fewshot ${NUM_FEWSHOT} \
     --batch_size 2 \

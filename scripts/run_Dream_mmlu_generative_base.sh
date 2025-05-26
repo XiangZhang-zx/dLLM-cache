@@ -7,14 +7,14 @@ export HF_ALLOW_CODE_EVAL=1
 ACCEL_CONFIG="accelerate_config.yaml"
 MAIN_PORT="29510" 
 
-echo "Starting evaluation for bbh"
+echo "Starting evaluation for mmlu_generative"
 
 # --- Task Specific Parameters for bbh ---
 TASK="mmlu_generative"
 NUM_FEWSHOT=5     # From tasks="... bbh", nshots="... 3"
 MAX_NEW_TOKENS=256 # From tasks="... bbh", lengths="... 512"
 DIFFUSION_STEPS=256 # Note: based on original script (equal to max_new_tokens)
-TEMPERATURE=0.2    # From tasks="... bbh", temperatures="... 0"
+TEMPERATURE=0.0    # From tasks="... bbh", temperatures="... 0"
 TOP_P=0.95        # Constant in the original loop's model_args
 ADD_BOS_TOKEN="true" # Constant in the original loop's model_args
 # Note: original loop did NOT include escape_until=true

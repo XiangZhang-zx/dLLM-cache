@@ -6,8 +6,6 @@ accelerate launch --config_file accelerate_config.yaml evaluation_script.py -m l
 --num_fewshot 0  \
 --output_path ./humaneval_log/ \
 --log_samples \
---apply_chat_template \
---fewshot_as_multiturn \
 --confirm_run_unsafe_code
 
 accelerate launch --config_file accelerate_config.yaml evaluation_script.py -m lm_eval --model LLaDA --tasks humaneval --batch_size 2 \
@@ -16,6 +14,4 @@ accelerate launch --config_file accelerate_config.yaml evaluation_script.py -m l
 --num_fewshot 0  \
 --output_path ./humaneval_log/ \
 --log_samples \
---apply_chat_template \
---fewshot_as_multiturn \
 --confirm_run_unsafe_code
