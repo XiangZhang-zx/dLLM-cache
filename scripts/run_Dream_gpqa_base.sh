@@ -19,10 +19,8 @@ TOP_P=0.95        # Constant in the original loop's model_args
 ADD_BOS_TOKEN="true" # Constant in the original loop's model_args
 # Note: original loop did NOT include escape_until=true
 
-# 输出路径
 OUTPUT_PATH="./${TASK}_log"
 
-# 执行评估命令
 accelerate launch --config_file ${ACCEL_CONFIG} --main_process_port ${MAIN_PORT} evaluation_script.py --model dream \
     --model_args pretrained=${model},max_new_tokens=${MAX_NEW_TOKENS},diffusion_steps=${DIFFUSION_STEPS},temperature=${TEMPERATURE},top_p=${TOP_P},alg="entropy",alg_temp=0.0,prompt_interval_steps=-1,gen_interval_steps=-1,cfg_interval_steps=-1,transfer_ratio=0,is_feature_cache=False,is_cfg_cache=False \
     --tasks ${TASK} \
