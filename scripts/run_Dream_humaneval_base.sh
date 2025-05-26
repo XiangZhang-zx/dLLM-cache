@@ -1,12 +1,9 @@
 #!/bin/bash
 
-# 设置模型
 model="Dream-org/Dream-v0-Base-7B"
 
-# 允许代码评估 (humaneval 需要)
 export HF_ALLOW_CODE_EVAL=1
 
-# Accelerate 配置和主进程端口
 ACCEL_CONFIG="accelerate_config.yaml"
 MAIN_PORT="29510"
 
@@ -22,10 +19,8 @@ TOP_P=0.95
 ADD_BOS_TOKEN="true"
 ESCAPE_UNTIL="true" # Note: specific to the humaneval run in original script
 
-# 输出路径
 OUTPUT_PATH="./${TASK}_log"
 
-# 执行评估命令
 accelerate launch --config_file ${ACCEL_CONFIG} --main_process_port ${MAIN_PORT} evaluation_script.py --model dream \
     --model_args pretrained=${model},max_new_tokens=${MAX_NEW_TOKENS},diffusion_steps=${DIFFUSION_STEPS},temperature=${TEMPERATURE},top_p=${TOP_P},alg="entropy",alg_temp=0.0,prompt_interval_steps=-1,gen_interval_steps=-1,cfg_interval_steps=-1,transfer_ratio=0,is_feature_cache=False,is_cfg_cache=False \
     --tasks ${TASK} \
