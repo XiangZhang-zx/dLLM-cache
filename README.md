@@ -7,28 +7,18 @@ Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffus
 - [2025/05/23] The code of our paper has been released.
 - [2025/05/22] Our paper has been released.
 
-
-
 ## ✨️ Key Highlights
-<!-- Our approach excels across diverse tasks, as shown in the radar chart below: -->
+
 ![radar_speed](./asset/radar.png)
-
-<!-- Diffusion-based Large Language Models (dLLMs) offer a robust alternative to Autoregressive Models (ARMs) by iteratively denoising masked text segments. However, their bidirectional attention mechanism results in high inference latency, making traditional ARM acceleration methods like Key-Value caching incompatible.
-
-**dLLM-Cache** is a **training-free adaptive caching framework** designed for dLLMs. It leverages token stability across denoising steps, combining **long-interval prompt caching** with **partial response updates** guided by feature similarity. This enables efficient reuse of computations, significantly reducing latency without sacrificing output quality. -->
-
 
 - **Speedup**: Achieves up to **9.1x** speedup over standard dLLM pipelines, with **no performance loss** on most tasks.
 - **Evaluation**: Evaluated on **[LLaDA 8B](https://arxiv.org/abs/2502.09992)** and **[Dream 7B](https://hkunlp.github.io/blog/2025/dream/)**.
 - **Latency**: Approaches ARM-level inference speeds in many scenarios.
 
-
 ## :rocket: Pipeline
 
 Here's an overview of the process behind our **dLLM-Cache** method:
 ![pipeline](./asset/pipeline.png)
-
-
 
 ## 🛠️ Installation
 
