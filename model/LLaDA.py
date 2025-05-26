@@ -788,7 +788,7 @@ class LLaDA(TemplateLM):
                 gen_length=gen_kwargs.get("gen_length"),
                 block_length=gen_kwargs.get("block_length"),
                 cfg_scale=gen_kwargs.get("cfg_scale"),
-                remasking=gen_kwargs.get("remasking")
+                remasking=gen_kwargs.get("remasking",None) if gen_kwargs.get("remasking",None) else "low_confidence"
             )
             cont_toks_list = self.tokenizer.batch_decode(out, skip_special_tokens=True)
             for s in cont_toks_list:
