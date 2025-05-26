@@ -14,7 +14,7 @@ TASK="gpqa_main_generative_n_shot"
 NUM_FEWSHOT=5     # From tasks="... gpqa_main_generative_n_shot ...", nshots="... 4 ..."
 MAX_NEW_TOKENS=256 # From tasks="... gpqa_main_generative_n_shot ...", lengths="... 512 ..."
 DIFFUSION_STEPS=256 # Note: based on original script (equal to max_new_tokens)
-TEMPERATURE=0.0    # From tasks="... gpqa_main_generative_n_shot ...", temperatures="... 0 ..."
+TEMPERATURE=0.2    # From tasks="... gpqa_main_generative_n_shot ...", temperatures="... 0 ..."
 TOP_P=0.95        # Constant in the original loop's model_args
 ADD_BOS_TOKEN="true" # Constant in the original loop's model_args
 # Note: original loop did NOT include escape_until=true
