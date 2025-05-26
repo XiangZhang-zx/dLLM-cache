@@ -1,11 +1,11 @@
 #!/bin/bash
 
-model="Dream-org/Dream-v0-Base-7B"
+model="Dream-org/Dream-v0-Instruct-7B"
 
 export HF_ALLOW_CODE_EVAL=1
 
 ACCEL_CONFIG="accelerate_config.yaml"
-MAIN_PORT="29510" 
+MAIN_PORT="29510"
 
 echo "Starting evaluation for gsm8k_cot"
 

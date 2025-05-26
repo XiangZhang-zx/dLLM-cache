@@ -1,6 +1,6 @@
 #!/bin/bash
 
-model="Dream-org/Dream-v0-Base-7B"
+model="Dream-org/Dream-v0-Instruct-7B"
 
 export HF_ALLOW_CODE_EVAL=1
 
