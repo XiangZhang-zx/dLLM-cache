@@ -46,7 +46,7 @@ Create a Python environment with `conda` or `virtualenv` and install dependencie
 bash install.sh
 ```
 
-4. demo:
+3. demo:
 
 ```bash
 python demo_{model_name}.py
