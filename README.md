@@ -78,3 +78,8 @@ If you find dLLM-Cache useful for your research and applications, please cite us
       url={https://github.com/maomaocun/dLLM-cache},
 }
 ```
+
+## :star2: Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=maomaocun/dLLM-cache&type=Timeline)](https://www.star-history.com/#maomaocun/dLLM-cache&Timeline)
+
