@@ -1,5 +1,5 @@
 import torch
-from cache import dLLMCache
+from dllm_cache.cache import dLLMCache
 import torch.nn.functional as F
 import numpy as np
 

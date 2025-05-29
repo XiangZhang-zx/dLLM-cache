@@ -1,13 +1,11 @@
 import time
 from datetime import datetime
-from cache import dLLMCache, dLLMCacheConfig
-from hook import register_cache_LLaDA, logout_cache_LLaDA
+from dllm_cache.cache import dLLMCache, dLLMCacheConfig
+from dllm_cache.hook import register_cache_LLaDA, logout_cache_LLaDA
 from dataclasses import asdict
 from transformers import AutoModel, AutoTokenizer
 import torch
 from utils import generate
-import torch.nn as nn
-from typing import Optional
 
 # Configuration parameters
 prompt_interval_steps = 100

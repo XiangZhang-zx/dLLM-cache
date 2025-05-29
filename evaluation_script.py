@@ -1,4 +1,4 @@
-from model import LLaDA,Dream
+from eval_model import LLaDA,Dream
 from utils import   set_seed
 import os
 from lm_eval.__main__ import cli_evaluate

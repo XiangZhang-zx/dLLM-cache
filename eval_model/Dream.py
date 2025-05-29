@@ -41,8 +41,8 @@ from lm_eval.models.utils import (
 )
 
 eval_logger = logging.getLogger(__name__)
-from cache import  dLLMCacheConfig,dLLMCache
-from hook import  register_cache_Dream
+from dllm_cache.cache import  dLLMCacheConfig,dLLMCache
+from dllm_cache.hook import  register_cache_Dream
 from dataclasses import asdict
 T = TypeVar("T", bound="LM")
 from lm_eval.api.model import LM

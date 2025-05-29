@@ -1,7 +1,7 @@
 import torch
 from typing import Optional, Tuple
 from transformers.cache_utils import Cache
-from cache import dLLMCache
+from dllm_cache.cache import dLLMCache
 import torch.nn as nn
 import types
 

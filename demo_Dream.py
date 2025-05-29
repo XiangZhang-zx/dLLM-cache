@@ -1,12 +1,10 @@
 import time
 from datetime import datetime
-from cache import dLLMCache, dLLMCacheConfig
-from hook import register_cache_Dream, logout_cache_Dream
+from dllm_cache.cache import dLLMCache, dLLMCacheConfig
+from dllm_cache.hook import register_cache_Dream, logout_cache_Dream
 from dataclasses import asdict
 from transformers import AutoModel, AutoTokenizer
 import torch
-import torch.nn as nn
-from typing import Optional
 
 # Configuration parameters
 prompt_interval_steps = 100

@@ -2,7 +2,7 @@ import torch
 from typing import Optional, Tuple
 import torch.nn as nn
 import types
-from cache import dLLMCache
+from dllm_cache.cache import dLLMCache
 
 
 
