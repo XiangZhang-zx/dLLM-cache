@@ -1,6 +1,6 @@
 # dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching
 
-Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching"](./asset/paper.pdf)** (dLLM-Cache).
+Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching"](https://www.researchgate.net/publication/392169456_dLLM-Cache_Accelerating_Diffusion_Large_Language_Models_with_Adaptive_Caching)** (dLLM-Cache).
 
 ## :fire: News
 - [2025/05/31] Our dLLM-Cache is integrated into [LLaDA-V](https://github.com/ML-GSAI/LLaDA-V).
@@ -12,7 +12,7 @@ Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffus
 ![radar_speed](./asset/radar.png)
 - **Currently supported models**: [LLaDA](https://github.com/ML-GSAI/LLaDA), [Dream](https://github.com/HKUNLP/Dream), [LLaDA-V](https://github.com/ML-GSAI/LLaDA-V).
 - **Speedup**: Achieves up to **9.1x** speedup over standard dLLM pipelines, with **no performance loss** on most tasks.
-- **Evaluation**: Evaluated on **[LLaDA 8B](https://arxiv.org/abs/2502.09992)** and **[Dream 7B](https://hkunlp.github.io/blog/2025/dream/)**.
+- **Evaluation**: Evaluated on [LLaDA 8B](https://arxiv.org/abs/2502.09992) and [Dream 7B](https://hkunlp.github.io/blog/2025/dream/).
 - **Latency**: Approaches ARM-level inference speeds in many scenarios.
 
 ## :rocket: Pipeline
