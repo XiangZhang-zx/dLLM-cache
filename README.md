@@ -1,6 +1,6 @@
 # dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching
 
-Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching"](https://www.researchgate.net/publication/392169456_dLLM-Cache_Accelerating_Diffusion_Large_Language_Models_with_Adaptive_Caching)** (dLLM-Cache).
+Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching"](https://arxiv.org/abs/2506.06295)** (dLLM-Cache).
 
 ## :fire: News
 - [2025/05/31] Our dLLM-Cache is integrated into [LLaDA-V](https://github.com/ML-GSAI/LLaDA-V).
@@ -71,11 +71,11 @@ This repository was built off of [LLaDA](https://github.com/ML-GSAI/LLaDA), [Dre
 If you find dLLM-Cache useful for your research and applications, please cite using this BibTeX:
 
 ```bibtex
-@misc{liu2025dllm,
-      title={dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching}, 
-      author={Zhiyuan Liu and Yicun Yang and Yaojie Zhang and Junjie Chen and Chang Zou and Qingyan Wei and Shaobo Wang and Linfeng Zhang},
-      year={2025},
-      url={https://github.com/maomaocun/dLLM-cache},
+@article{liu2025dllm,
+  title={dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching},
+  author={Liu, Zhiyuan and Yang, Yicun and Zhang, Yaojie and Chen, Junjie and Zou, Chang and Wei, Qingyuan and Wang, Shaobo and Zhang, Linfeng},
+  journal={arXiv preprint arXiv:2506.06295},
+  year={2025}
 }
 ```
 
