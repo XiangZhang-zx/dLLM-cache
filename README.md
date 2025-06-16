@@ -6,12 +6,12 @@ Official PyTorch implementation of the paper **["dLLM-Cache: Accelerating Diffus
 - [2025/06/15] Our dLLM-Cache is compatible with [MMaDA](https://github.com/Gen-Verse/MMaDA).
 - [2025/05/31] Our dLLM-Cache is integrated into [LLaDA-V](https://github.com/ML-GSAI/LLaDA-V).
 - [2025/05/23] The code of our paper has been released.
-- [2025/05/22] Our paper has been released.
+- [2025/05/17] Our paper has been released.
 
 ## ✨️ Key Highlights
 
 ![radar_speed](./asset/radar.png)
-- **Currently supported models**: [LLaDA](https://github.com/ML-GSAI/LLaDA), [Dream](https://github.com/HKUNLP/Dream), [LLaDA-V](https://github.com/ML-GSAI/LLaDA-V) and [MMada](https://github.com/Gen-Verse/MMaDA).
+- **Currently supported models**: [LLaDA](https://github.com/ML-GSAI/LLaDA), [Dream](https://github.com/HKUNLP/Dream), [LLaDA-V](https://github.com/ML-GSAI/LLaDA-V) and [MMaDA](https://github.com/Gen-Verse/MMaDA).
 - **Speedup**: Achieves up to **9.1x** speedup over standard dLLM pipelines, with **no performance loss** on most tasks.
 - **Evaluation**: Evaluated on [LLaDA 8B](https://arxiv.org/abs/2502.09992) and [Dream 7B](https://hkunlp.github.io/blog/2025/dream/).
 - **Latency**: Approaches ARM-level inference speeds in many scenarios.
@@ -66,7 +66,7 @@ If you have any questions, please email [yangyicun187@gmail.com](mailto:yangyicu
 
 
 ## 🎉 Acknowledgements
-This repository was built off of [LLaDA](https://github.com/ML-GSAI/LLaDA), [Dream](https://github.com/HKUNLP/Dream), [LLaDA-V](https://github.com/ML-GSAI/LLaDA-V) and [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
+This repository was built off of [LLaDA](https://github.com/ML-GSAI/LLaDA), [Dream](https://github.com/HKUNLP/Dream), [LLaDA-V](https://github.com/ML-GSAI/LLaDA-V), [MMaDA](https://github.com/Gen-Verse/MMaDA) and [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness).
 
 ## :pushpin: Citation
 If you find dLLM-Cache useful for your research and applications, please cite using this BibTeX:
