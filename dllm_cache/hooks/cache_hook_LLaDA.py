@@ -153,8 +153,8 @@ def cache_hook_feature(
     prompt_length = feature_cache.prompt_length
     x_prompt = x[:, :prompt_length, :]
     x_gen = x[:, prompt_length:, :]
-    refresh_gen = feature_cache.refresh_gen(layer_id=self.layer_id)
-    refresh_prompt = feature_cache.refresh_prompt(layer_id=self.layer_id)
+    refresh_gen = feature_cache.refresh_gen(layer_id=self.layer_id) or self.layer_id == 0
+    refresh_prompt = feature_cache.refresh_prompt(layer_id=self.layer_id) or self.layer_id == 0
     transfer_ratio = feature_cache.transfer_ratio
     bs, seq_len, dim = x.shape
     transfer = transfer_ratio > 0 and transfer_ratio <= 1
