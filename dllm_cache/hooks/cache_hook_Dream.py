@@ -67,8 +67,8 @@ def decoder_hook(
     feature_cache = dLLMCache()
     feature_cache.update_step(self.self_attn.layer_idx)
     prompt_length = feature_cache.prompt_length
-    refresh_gen = feature_cache.refresh_gen(layer_id=self.self_attn.layer_idx)
-    refresh_prompt = feature_cache.refresh_prompt(layer_id=self.self_attn.layer_idx)
+    refresh_gen = feature_cache.refresh_gen(layer_id=self.self_attn.layer_idx) or self.self_attn.layer_idx == 0
+    refresh_prompt = feature_cache.refresh_prompt(layer_id=self.self_attn.layer_idx) or self.self_attn.layer_idx == 0
     x_prompt = x[:, :prompt_length]
     x_gen = x[:, prompt_length:]
     transfer_ratio = feature_cache.transfer_ratio
