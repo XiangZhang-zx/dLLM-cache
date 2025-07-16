@@ -16,7 +16,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 gen_length = 256
 steps = 256
 max_tokens = 2048
-
+block_length = 8
 # Load model and tokenizer
 model = (
     AutoModel.from_pretrained(
