@@ -148,7 +148,7 @@ while True:
         model=model,
         steps=steps,
         gen_length=gen_length,
-        block_length=steps,
+        block_length=block_length,
     )
     end_time = time.time()
 
