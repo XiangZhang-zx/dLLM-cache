@@ -47,17 +47,17 @@ python demo_{model_name}.py
 Run experiments using the provided scripts:
 
 ```bash
-bash scripts/run_{model_name}_{task_name}_base.sh
+bash eval_scripts/run_{model_name}_{task_name}_base.sh
 ```
 ### :blue_book: Example Usage
 1. GSM8K with LLaDA
 ```bash
-bash scripts/run_LLaDA_gsm8k_base.sh
+bash eval_scripts/run_LLaDA_gsm8k_base.sh
 ```
 
 2. BBH with Dream
 ```bash
-bash scripts/run_Dream_bbh_base.sh
+bash eval_scripts/run_Dream_bbh_base.sh
 ```
 
 
