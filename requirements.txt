@@ -12,5 +12,5 @@ transformers
 deepspeed
 huggingface_hub[hf_xet]
 calflops
-lm-eval[longbench]
+# lm-eval[longbench]
 lm-eval[math]
