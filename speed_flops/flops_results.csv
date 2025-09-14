@@ -1,0 +1,4 @@
+avg_run_time_per_token,avg_token_per_second,total_run_time,avg_flops_per_token,avg_macs_per_token,total_flops,total_macs,prompt_interval_steps,gen_interval_steps,transfer_ratio,steps,avg_prompt_length
+0.04375872,22.85258581,11.2022333984375,4.7234,2.3617,1209.1904,604.5952,-1,-1,-1,256,59
+0.04371157,22.87723584,11.1901630859375,4.7234,2.3617,1209.1904,604.5952,-1,-1,-1,256,59
+0.04376239,22.85067347,11.2031708984375,4.7234,2.3617,1209.1904,604.5952,-1,-1,-1,256,59

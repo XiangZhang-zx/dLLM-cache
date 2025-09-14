@@ -34,6 +34,8 @@ def parse_args():
     parser.add_argument("--cache_order", type=int, default=0, 
                     help="Maximum order for caching.")
     parser.add_argument("--prompt", type=str, default="*", help="Input prompt")
+    parser.add_argument("--questions_file", type=str, default="", help="Path to questions file")
+    parser.add_argument("--question_limit", type=int, default=1, help="Number of questions to test")
     parser.add_argument("--block_length", type=int, default=8, help="Block length")
     parser.add_argument("--temperature", type=float, default=0.0, help="Temperature for generation")
     parser.add_argument("--cfg_scale", type=float, default=0.0, help="CFG scale for generation")

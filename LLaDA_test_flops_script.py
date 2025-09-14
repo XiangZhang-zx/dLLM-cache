@@ -25,16 +25,16 @@ def parse_args():
                     help="Transfer ratio for FLOPs calculation in Generate Gap.")
     parser.add_argument("--gpu_ids", type=int, nargs='+', default=[0], 
                     help="List of GPU IDs to run the model on (e.g., 0, 1, 2).")
-    parser.add_argument("--gen_length", type=int, default=256, 
+    parser.add_argument("--gen_length", type=int, default=512, 
                         help="Generation length")
-    parser.add_argument("--steps", type=int, default=256, 
+    parser.add_argument("--steps", type=int, default=512, 
                     help="Number of times to repeat the FLOPs calculation with cache for averaging.")
     parser.add_argument("--avg_prompt_length", type=int, default=893, 
                     help="Maximum sequence length for FLOPs calculation.")
     parser.add_argument("--cache_order", type=int, default=0, 
                     help="Maximum order for caching.")
     parser.add_argument("--prompt", type=str, default="*", help="Input prompt")
-    parser.add_argument("--block_length", type=int, default=8, help="Block length")
+    parser.add_argument("--block_length", type=int, default=512, help="Block length")
     parser.add_argument("--temperature", type=float, default=0.0, help="Temperature for generation")
     parser.add_argument("--cfg_scale", type=float, default=0.0, help="CFG scale for generation")
     parser.add_argument("--remasking", type=str, default="low_confidence", help="Remasking strategy")

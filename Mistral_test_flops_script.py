@@ -32,7 +32,7 @@ def convert_to_float(value):
     return float(value)
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Speed and FLOPs test for LLaMA-3.1-8B-Instruct generation")
+    parser = argparse.ArgumentParser(description="Speed and FLOPs test for Mistral-v0.3-base generation")
     parser.add_argument("--prompt_length", type=int, default=893, help="Length of input prompt in tokens")
     parser.add_argument("--generate_length", type=int, default=256, help="Number of tokens to generate")
     parser.add_argument("--batch_size", type=int, default=1, help="Batch size for generation")
@@ -41,13 +41,13 @@ def parse_args():
     parser.add_argument("--prompt_interval_steps", type=int, default=0, help="Prompt interval steps for FLOPs")
     parser.add_argument("--gen_interval_steps", type=int, default=0, help="Generation interval steps for FLOPs")
     parser.add_argument("--transfer_ratio", type=float, default=1.0, help="Transfer ratio for FLOPs")
-    parser.add_argument("--model_path", type=str, default="meta-llama/Llama-3.1-8B", help="Path to LLaMA model")
+    parser.add_argument("--model_path", type=str, default="mistralai/Mistral-7B-v0.3", help="Path to Mistral model")
     parser.add_argument("--device", type=str, default="cuda", help="Device to run the model (cuda or cpu)")
     return parser.parse_args()
 
 def create_prompt(tokenizer, length):
     """Create a dummy prompt with approximately the specified token length."""
-    sentence = "This is a test sentence used to simulate a long prompt for the LLaMA model. "
+    sentence = "This is a test sentence used to simulate a long prompt for the Mistral model. "
     num_repeats = length // len(tokenizer.encode(sentence)) + 1
     prompt = sentence * num_repeats
     tokens = tokenizer.encode(prompt)[:length]
@@ -58,12 +58,11 @@ def main():
 
     # Load model and tokenizer
     print("Loading model and tokenizer...")
-    tokenizer = AutoTokenizer.from_pretrained(args.model_path, use_auth_token=True)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_path)
     model = AutoModelForCausalLM.from_pretrained(
         args.model_path,
         torch_dtype=torch.float16,
-        device_map="cuda:0",  # 强制使用单GPU
-        use_auth_token=True
+        device_map="cuda:0"  # 强制使用单GPU
     )
     model.eval()
 
