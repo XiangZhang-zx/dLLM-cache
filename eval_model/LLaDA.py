@@ -784,11 +784,12 @@ class LLaDA(TemplateLM):
                 input_ids=context_enc,
                 attention_mask=attn_masks,
                 model=self.model,
-                steps=gen_kwargs.get("steps"),
-                gen_length=gen_kwargs.get("gen_length"),
-                block_length=gen_kwargs.get("block_length"),
-                cfg_scale=gen_kwargs.get("cfg_scale"),
-                remasking=gen_kwargs.get("remasking",None) if gen_kwargs.get("remasking",None) else "low_confidence"
+                steps=gen_kwargs.get("steps", 128),
+                gen_length=gen_kwargs.get("gen_length", 128),
+                block_length=gen_kwargs.get("block_length", 128),
+                cfg_scale=gen_kwargs.get("cfg_scale", 0.0),
+                temperature=gen_kwargs.get("temperature", 0.0),
+                remasking=gen_kwargs.get("remasking", "low_confidence")
             )
             cont_toks_list = self.tokenizer.batch_decode(out, skip_special_tokens=True)
             for s in cont_toks_list:
